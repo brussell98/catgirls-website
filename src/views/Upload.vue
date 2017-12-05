@@ -209,7 +209,6 @@ export default {
 			return this.$http.get(`https://danbooru.donmai.us/posts/${id}.json`).then(response => {
 				this.$Progress.finish();
 
-<<<<<<< HEAD
 				let tags = response.data.tag_string_general;
 				if (response.data.tag_string_copyright)
 					tags += ' ' + response.data.tag_string_copyright;
@@ -221,16 +220,6 @@ export default {
 					.replace(/_/g, ' ')
 					.replace(/[0-9](girl|boy|koma)/g, str => str.split(/([0-9])/).join(' '));
 				this.details.artist = response.data.tag_string_artist.replace(/_/g, ' ');
-=======
-				this.details.tags = response.data.tag_string
-					.replace(response.data.tag_string_artist, '')
-					.replace(/(md5_mismatch|commentary_request|commentary|translation_request|translated|check_translation|translation_check|translation_note|copyright_?[\w_]*)/g, '') // remove unwanted tags
-					.replace(/ +/g, ', ')
-					.replace(/[0-9](girl|boy|koma)/g, function splitTag(str){ return str.split(/([0-9])/).join(' '); })
-					.replace(/_/g,' ');
-				this.details.artist = response.data.tag_string_artist;
-				id.value = null;
->>>>>>> tagging
 			}).catch(error => {
 				this.$Progress.fail();
 
