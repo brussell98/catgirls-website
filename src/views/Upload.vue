@@ -217,7 +217,7 @@ export default {
 
 				this.details.tags = tags
 					.replace(/ +/g, ', ').replace(/_/g, ' ');
-				this.details.artist = response.data.tag_string_artist.replace(/_/g, ' ');
+				this.details.artist = response.data.tag_string_artist.replace(/_/g, ' ').replace(/[0-9](girl|boy|koma)/g, str => str.split(/([0-9])/).join(' '));
 			}).catch(error => {
 				this.$Progress.fail();
 
