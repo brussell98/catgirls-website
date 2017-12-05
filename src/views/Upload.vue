@@ -177,7 +177,9 @@ export default {
 				this.details.tags = response.data.tag_string
 					.replace(response.data.tag_string_artist, '')
 					.replace(/(md5_mismatch|commentary_request|commentary|translation_request|translated|check_translation|translation_check|translation_note|copyright_?[\w_]*)/g, '') // remove unwanted tags
-					.replace(/ +/g, ', ');
+					.replace(/ +/g, ', ')
+					.replace(/[0-9](girl|boy|koma)/g, function splitTag(str){ return str.split(/([0-9])/).join(' '); })
+					.replace(/_/g,' ');
 				this.details.artist = response.data.tag_string_artist;
 				id.value = null;
 			}).catch(error => {
