@@ -1,6 +1,6 @@
 # Nekos.moe Website [![Build Status](https://travis-ci.org/brussell98/catgirls-website.svg?branch=master)](https://travis-ci.org/brussell98/catgirls-website)
 
-A website for sharing art featuring characters with cat-like appearances
+A website for sharing art featuring characters with cat-like appearances and some other specifications.
 
 [API repo](https://github.com/Nekos-moe/api)  
 [Trello board](https://trello.com/b/R14Gr3ae/catgirls-website)
