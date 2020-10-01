@@ -30,4 +30,8 @@ npm run e2e
 npm test
 ```
 
+Quick description
+
+The Site is about npm and if you can try finding the bug in the website then you can fork it and fix it .
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](https://vue-loader.vuejs.org).
